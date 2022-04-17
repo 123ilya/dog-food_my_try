@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Counter } from "./Counter";
+import { Styles } from "./Styles";
 
 export const PracticeContainer = () => {
   const [isVisible, setIsVisible] = useState(false);
-  // console.log(isVisible);
-  // useEffect(() => {
-  //   console.log("RENDER RERENDER");
-  // });
-  // useEffect(() => {
-  //   console.log("MOUNT");
-  //   return () => {
-  //     console.log("UNMOUNT");
-  //   };
-  // }, []);
-  // useEffect(() => {
-  //   console.log("UPDATE");
-  // }, [isVisible]);
+  console.log(isVisible);
+  useEffect(() => {
+    console.log("RENDER RERENDER");
+  });
+  useEffect(() => {
+    console.log("MOUNT");
+    return () => {
+      console.log("UNMOUNT");
+    };
+  }, []);
+  useEffect(() => {
+    console.log("UPDATE");
+  }, [isVisible]);
   return (
     <div>
       <h6>PracticeContainer</h6>
@@ -27,6 +28,7 @@ export const PracticeContainer = () => {
         }}>
         CLick
       </button>
+      <Styles></Styles>
     </div>
   );
 };

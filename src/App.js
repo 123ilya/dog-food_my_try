@@ -4,14 +4,15 @@ import mockData from "../data.json";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { List } from "./components/List";
+import styles from "./index.css"
 // import { PracticeContainer } from "./practice/PracticeContainer";
 
 export const App = () => {
   const [foodList, setFoodlist] = useState(mockData);
   return (
-    <div>
+    <div className="appContainer">
       {/* <PracticeContainer></PracticeContainer> */}
-      <Header></Header>
+      <Header changeList={setFoodlist} ></Header>
       <List list={foodList}></List>
       <Footer></Footer>
     </div>
